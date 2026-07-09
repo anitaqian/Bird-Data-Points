@@ -1,0 +1,30 @@
+---
+import Wireframe from '../layouts/Wireframe.astro';
+
+const screens = [
+  { name: 'Home', href: '/home', purpose: 'Entry point — choose to explore the map or log a sighting.' },
+  { name: 'Map', href: '/map', purpose: 'Interactive map with pins showing locations that have bird data.' },
+  { name: 'Location Detail', href: '/location-detail', purpose: 'List of bird species at a selected location with search.' },
+  { name: 'Species Detail', href: '/species-detail', purpose: 'Population trend data and conservation info for a specific species.' },
+  { name: 'Log Sighting', href: '/log-sighting', purpose: 'Form for recording a bird sighting at a location.' },
+];
+---
+<Wireframe title="Screen Inventory">
+  <p>Birdpoint wireframes. Click a screen to walk through it.</p>
+
+  <ul>
+    {screens.map((s) => (
+      <li style="margin: 0.5rem 0;">
+        <a href={s.href}><strong>{s.name}</strong></a> — {s.purpose}
+      </li>
+    ))}
+  </ul>
+
+  <div class="scenario-note">
+    <p><strong>Scenarios to walk:</strong></p>
+    <ul>
+      <li>Scenario 1.1 — Birds gone after construction: Home → Map → Location Detail → Species Detail</li>
+      <li>Scenario 2.1 — Post-wildfire recovery: Home → Map → Location Detail → Species Detail</li>
+    </ul>
+  </div>
+</Wireframe>

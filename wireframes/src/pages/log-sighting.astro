@@ -1,0 +1,48 @@
+---
+import Wireframe from '../layouts/Wireframe.astro';
+---
+<Wireframe title="Log Sighting">
+  <p style="font-size: 0.8rem; opacity: 0.6;">User who tapped Log a Sighting from Home.</p>
+
+  <wired-card elevation="2" style="padding: 1rem; display: block;">
+
+    <div style="margin-bottom: 1rem;">
+      <label style="font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Species *</label>
+      <wired-input placeholder="e.g. California Towhee" style="width: 100%; display: block;"></wired-input>
+    </div>
+
+    <div style="margin-bottom: 1rem;">
+      <label style="font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Location *</label>
+      <wired-input placeholder="e.g. Santa Barbara, CA" style="width: 100%; display: block;"></wired-input>
+    </div>
+
+    <div style="margin-bottom: 1rem;">
+      <label style="font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Photo (optional)</label>
+      <wired-button>📷 Take / Upload Photo</wired-button>
+      <div style="margin-top: 0.5rem; width: 80px; height: 60px; border: 1px dashed #222; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; opacity: 0.4;">[ photo ]</div>
+    </div>
+
+    <div style="margin-bottom: 1.25rem;">
+      <label style="font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Notes (optional)</label>
+      <textarea style="width: 100%; height: 60px; border: 1px dashed #222; background: transparent; font-family: inherit; font-size: 0.85rem; padding: 0.4rem; box-sizing: border-box;" placeholder="Anything notable about this sighting..."></textarea>
+    </div>
+
+    <wired-button style="width: 100%; font-size: 1rem;">Submit Sighting</wired-button>
+
+    <!-- Confirmation state (shown after submit) -->
+    <div style="margin-top: 1rem; padding: 0.75rem; border: 1px dashed #222; text-align: center; display: none;" id="confirmation">
+      <div style="font-size: 1.5rem;">✓</div>
+      <p style="margin: 0.25rem 0; font-size: 0.9rem;">Sighting logged!</p>
+      <a href="/map"><wired-button>Back to Map</wired-button></a>
+    </div>
+
+  </wired-card>
+
+  <div class="scenario-note">
+    <strong>Actions:</strong>
+    <ul>
+      <li>Submit → confirmation shown on this screen, then <a href="/map">Map</a> centered on logged location</li>
+    </ul>
+    <p>* = required field</p>
+  </div>
+</Wireframe>

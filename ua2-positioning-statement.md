@@ -9,11 +9,11 @@ The statement at the top is the public-facing artifact — short, clean, one par
 ## Statement
 
 > For an engaged citizen who cares about conservation and wants to learn more about birds and wants all the data and info in one app
-> who wants to use the data points of each species of bird in a location to take action and advocate for the birds in the habitat and spread awareness,
+> who wants to have data points of each species of bird in a location in one place to take action and advocate for the birds in the habitat and spread awareness,
 > the Birdpoint is an interactive data tool
 > that gives users accessible bird population data to identify at-risk species and take informed conservation action.
-> Unlike Google and scattered online sources,
-> our product allows users to see trends of the bird data points all in one place.
+> Unlike Google, eBird, and other tools not designed for non-experts,
+> our product allows users to see trends of the bird data points all in one place and accessible to non-experts.
 
 ---
 
@@ -21,13 +21,13 @@ The statement at the top is the public-facing artifact — short, clean, one par
 
 Per-clause status. Mirrors the per-clause status in `UA0-PROJECT-STATUS.md`.
 
-- **Target customer:** drafted-unconfirmed
-- **Need or opportunity:** drafted-unconfirmed
-- **Product name:** drafted from belief
-- **Product category:** drafted from belief
-- **Key benefit:** drafted-unconfirmed
-- **Primary competitive alternative:** drafted-unconfirmed
-- **Primary differentiation:** drafted-unconfirmed
+- **Target customer:** evidenced by interview
+- **Need or opportunity:** refined by research
+- **Product name:** stable
+- **Product category:** stable
+- **Key benefit:** evidenced by interview
+- **Primary competitive alternative:** refined by research
+- **Primary differentiation:** refined by research
 
 Status values: `not started` | `drafted from belief` | `drafted-unconfirmed` | `refined by research` | `evidenced by interview` | `stable`.
 
@@ -35,7 +35,8 @@ Status values: `not started` | `drafted from belief` | `drafted-unconfirmed` | `
 
 ## Evidence
 
-One subsection per clause. Updated continuously across all five passes.
+Sister said she noticed the birds by the house vanished after that construction started, so she spent an hour online trying to find local wildlife status updates or city environmental reports to see what happened to them. Mom said it took her an entire weekend just to sort the data and clean the missing coordinate variables before she could even plot a basic trend line.
+
 
 ### Target customer
 
@@ -48,10 +49,11 @@ One subsection per clause. Updated continuously across all five passes.
 
 ### Need or opportunity
 
-- **Current belief:** Users want to use data points of each bird species in a location to take action, advocate for habitat protection, and spread awareness.
+- **Current belief:** Users want to have data points of each species of bird in a location in one place to take action and advocate for the birds in the habitat and spread awareness.
 - **Basis for the belief:** Origin interview — friend described going into population databases after a wildfire to understand species recovery. She wasn't just curious; she wanted to understand ecological impact. Student's inference that understanding precedes action.
 - **Evidence found:**
   - 2026-06-26, origin interview: Friend said she dug into spatial distribution data over a multi-year timeline to see if species were abandoning burn scars. She treated an out-of-range sighting as a "mini-research project" to understand environmental causes.
+  - 2026-07-01, web research: eBird's lack of integrated species guide called a "major drawback"; switching between apps described as something "nobody likes doing." Some apps (Birda) addressing ID+logging fragmentation but not population trend data for advocacy. Confirms fragmentation pain is real and active, not just latent.
 - **Alternatives considered:** "Who wants to identify birds in the field" — dropped because the interview pointed more strongly to trend/context than field ID as the primary need.
 - **What would change my mind:** If interviews show users mainly want field ID or casual logging, not trend analysis or advocacy.
 
@@ -84,18 +86,20 @@ One subsection per clause. Updated continuously across all five passes.
 
 ### Primary competitive alternative
 
-- **Current belief:** Google and scattered online sources.
-- **Basis for the belief:** Student's inference that most non-expert users start with Google. Origin interview confirmed the fragmentation problem — friend bridges eBird, BirdonMap, GIS tools, academic portals.
+- **Current belief:** Google, eBird, and other tools not designed for non-experts.
+- **Basis for the belief:** Student's inference that most non-expert users start with Google. Origin interview confirmed the fragmentation problem. Research confirmed eBird has trend data but is built for serious birders/researchers, not engaged citizens.
 - **Evidence found:**
-  - 2026-06-26, origin interview: Friend described the fragmentation: "If I want to identify a call on the fly, I use one app. If I want to log a sighting, I open another. If I want to understand the actual ecological context or population trends of that area, I have to go home, open my laptop, and dig through academic portals or GIS mapping tools."
-- **Alternatives considered:** Rangers/experts (access is limited and inconsistent); specialized apps like eBird (serve birdwatchers but not conservation-focused citizens who want trend data).
-- **What would change my mind:** If interviews show users are already using a specific tool they're happy with, or that rangers are the primary resource for most people.
+  - 2026-06-26, origin interview: Friend described bridging eBird, BirdonMap, GIS tools, and academic portals to answer one ecological question — confirming these tools exist but require expertise to use together.
+  - 2026-07-01, web research: eBird has Status & Trends maps with 36M checklists and trends for 495 species. NatureCounts, BirdCast, and Bird Conservation Network Tableau tool also exist. All are built for researchers or expert birders — not accessible to non-expert conservation advocates.
+- **Alternatives considered:** "Google and scattered online sources" — revised because eBird is a more direct competitor with actual trend data; the key distinction is accessibility, not just fragmentation.
+- **What would change my mind:** If interviews show users are already using eBird or NatureCounts and finding them sufficient.
 
 ### Primary differentiation
 
-- **Current belief:** Allows users to see trends of bird data points all in one place.
+- **Current belief:** Allows users to see trends of bird data points all in one place and accessible to non-experts.
 - **Basis for the belief:** The NEON dataset covers 2017–2022 across multiple U.S. ecosystems — multi-year, multi-location data that isn't consolidated anywhere accessible to non-researchers. Friend had to assemble this herself from multiple sources.
 - **Evidence found:**
   - 2026-06-26, origin interview: Friend described wanting "the actual spatial distribution data over a multi-year timeline" and having to build that view herself from separate tools.
-- **Alternatives considered:** "Simpler interface than academic tools" — true but not the core differentiator; "built-in ID features" — dropped, field ID is not the primary use case.
-- **What would change my mind:** If a competing app already does this well and users know about it.
+  - 2026-07-01, eBird documentation: Advanced trend features require RStudio scripts and statistical modeling tutorials — tools built for scientists and practitioners, not non-experts.
+- **Alternatives considered:** "Simpler interface than academic tools" — now confirmed as a real differentiator, not just a footnote; "built-in ID features" — dropped, field ID is not the primary use case.
+- **What would change my mind:** If interviews show users find eBird accessible enough, or if NatureCounts has already solved this for non-experts.

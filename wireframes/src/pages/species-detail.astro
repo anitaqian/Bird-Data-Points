@@ -1,0 +1,101 @@
+---
+import Wireframe from '../layouts/Wireframe.astro';
+---
+<Wireframe title="Species Detail">
+  <p style="font-size: 0.8rem; opacity: 0.6;">User who tapped a species from Location Detail.</p>
+
+  <!-- Species header -->
+  <wired-card elevation="2" style="padding: 1rem; margin-bottom: 1rem; display: block;">
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      <div style="width: 72px; height: 72px; border: 1px dashed #222; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🐦</div>
+      <div>
+        <h2 style="margin: 0 0 0.25rem; font-size: 1.1rem;">California Towhee</h2>
+        <div style="font-size: 0.8rem; opacity: 0.6;">Melozone crissalis</div>
+        <div style="font-size: 0.8rem; margin-top: 0.5rem;">📍 Santa Barbara, CA</div>
+      </div>
+    </div>
+    <p style="margin: 0.75rem 0 0; font-size: 0.85rem;">
+      A large, plain brown sparrow common in chaparral and suburban gardens of coastal California. Population trends in this area are closely tied to native shrub cover and insect availability.
+    </p>
+  </wired-card>
+
+  <!-- Population trend graph -->
+  <wired-card elevation="1" style="padding: 1rem; margin-bottom: 0.5rem; display: block;">
+    <h3 style="margin: 0 0 0.75rem; font-size: 0.95rem;">Population Trend (2017–2022)</h3>
+    <!-- Hand-drawn graph placeholder -->
+    <div style="position: relative; height: 120px; border-bottom: 2px solid #222; border-left: 2px solid #222; margin: 0 0 0.5rem 1.5rem;">
+      <!-- Y axis label -->
+      <div style="position: absolute; left: -1.5rem; top: 50%; transform: translateY(-50%) rotate(-90deg); font-size: 0.65rem; opacity: 0.5; white-space: nowrap;">Bird count</div>
+      <!-- Fake trend line -->
+      <svg width="100%" height="100%" style="overflow: visible;">
+        <polyline
+          points="0,80 40,70 80,60 120,75 160,55 200,40 240,45"
+          fill="none"
+          stroke="#222"
+          stroke-width="2"
+          stroke-dasharray="4 2"
+        />
+        <!-- Dots -->
+        <circle cx="0" cy="80" r="4" fill="#222"/>
+        <circle cx="40" cy="70" r="4" fill="#222"/>
+        <circle cx="80" cy="60" r="4" fill="#222"/>
+        <circle cx="120" cy="75" r="4" fill="#222"/>
+        <circle cx="160" cy="55" r="4" fill="#222"/>
+        <circle cx="200" cy="40" r="4" fill="#222"/>
+        <circle cx="240" cy="45" r="4" fill="#222"/>
+      </svg>
+      <!-- X axis labels -->
+      <div style="display: flex; justify-content: space-between; margin-top: 0.25rem; font-size: 0.65rem; opacity: 0.6;">
+        <span>2017</span><span>2018</span><span>2019</span><span>2020</span><span>2021</span><span>2022</span>
+      </div>
+    </div>
+    <p style="font-size: 0.75rem; opacity: 0.5; margin: 0.25rem 0 0; font-style: italic;">Last updated: March 2023 · Source: NEON</p>
+
+    <!-- Expand to table -->
+    <details style="margin-top: 0.75rem;">
+      <summary style="cursor: pointer; font-size: 0.85rem;">Show data table</summary>
+      <table style="width: 100%; margin-top: 0.5rem; font-size: 0.8rem; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th style="text-align: left; border-bottom: 1px dashed #222; padding: 0.25rem;">Year</th>
+            <th style="text-align: right; border-bottom: 1px dashed #222; padding: 0.25rem;">Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding: 0.2rem;">2017</td><td style="text-align: right; padding: 0.2rem;">42</td></tr>
+          <tr><td style="padding: 0.2rem;">2018</td><td style="text-align: right; padding: 0.2rem;">38</td></tr>
+          <tr><td style="padding: 0.2rem;">2019</td><td style="text-align: right; padding: 0.2rem;">35</td></tr>
+          <tr><td style="padding: 0.2rem;">2020</td><td style="text-align: right; padding: 0.2rem;">40</td></tr>
+          <tr><td style="padding: 0.2rem;">2021</td><td style="text-align: right; padding: 0.2rem;">31</td></tr>
+          <tr><td style="padding: 0.2rem;">2022</td><td style="text-align: right; padding: 0.2rem;">28</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </wired-card>
+
+  <!-- AI conservation suggestions -->
+  <wired-card elevation="1" style="padding: 1rem; margin-bottom: 1rem; display: block;">
+    <h3 style="margin: 0 0 0.5rem; font-size: 0.95rem;">🤖 Conservation Suggestions</h3>
+    <p style="font-size: 0.85rem; margin: 0 0 0.75rem;">
+      Based on declining counts in this area, here are ways you can help:
+    </p>
+    <ul style="font-size: 0.85rem; margin: 0 0 0.75rem; padding-left: 1.25rem;">
+      <li>Plant native chaparral shrubs (toyon, coffeeberry) to restore foraging habitat.</li>
+      <li>Reduce pesticide use — towhees rely on ground insects for protein.</li>
+      <li>Report sightings to help track recovery trends.</li>
+    </ul>
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <wired-input placeholder="Ask a question about this species..." style="flex: 1;"></wired-input>
+      <wired-button>Ask</wired-button>
+    </div>
+    <div style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.5; font-style: italic;">[ AI response appears here ]</div>
+  </wired-card>
+
+  <div class="scenario-note">
+    <strong>Actions:</strong>
+    <ul>
+      <li>Click "Show data table" → table expands inline below graph</li>
+      <li>Ask AI → response appears inline in this section</li>
+    </ul>
+  </div>
+</Wireframe>

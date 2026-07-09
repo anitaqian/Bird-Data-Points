@@ -1,0 +1,31 @@
+---
+import Wireframe from '../layouts/Wireframe.astro';
+---
+<Wireframe title="Home">
+  <p style="font-size: 0.8rem; opacity: 0.6;">Any user when they first open the app.</p>
+
+  <wired-card elevation="2" style="padding: 1.5rem; margin: 1rem 0; display: block; text-align: center;">
+    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐦</div>
+    <h2 style="margin: 0 0 0.5rem;">Birdpoint</h2>
+    <p style="font-size: 0.9rem; opacity: 0.8;">
+      Explore bird population data across U.S. locations. See how species are responding to habitat change, wildfires, and more — no spreadsheets required.
+    </p>
+  </wired-card>
+
+  <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+    <a href="/map" style="text-decoration: none;">
+      <wired-button style="width: 100%; font-size: 1rem;">🗺 Explore Map</wired-button>
+    </a>
+    <a href="/log-sighting" style="text-decoration: none;">
+      <wired-button style="width: 100%; font-size: 1rem;">📝 Log a Sighting</wired-button>
+    </a>
+  </div>
+
+  <div class="scenario-note">
+    <strong>Actions:</strong>
+    <ul>
+      <li>Explore Map → <a href="/map">Map</a></li>
+      <li>Log a Sighting → <a href="/log-sighting">Log Sighting</a></li>
+    </ul>
+  </div>
+</Wireframe>

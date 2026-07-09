@@ -1,0 +1,63 @@
+---
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title} — Birdpoint Wireframe</title>
+    <script type="module" src="https://unpkg.com/wired-elements?module"></script>
+    <style>
+      :root {
+        --paper: #fdf8ec;
+        --ink: #222;
+      }
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Patrick Hand', 'Comic Sans MS', cursive, system-ui;
+        max-width: 420px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+      }
+      header {
+        border-bottom: 2px dashed var(--ink);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      header a { color: var(--ink); font-size: 0.9rem; }
+      .screen-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.5;
+      }
+      h1 { margin: 0.2rem 0 0; font-size: 1.2rem; }
+      main { line-height: 1.6; }
+      .scenario-note {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px dashed var(--ink);
+        font-size: 0.8rem;
+        opacity: 0.6;
+      }
+      wired-button { margin: 0.3rem 0; }
+      a { color: var(--ink); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <div class="screen-label">Birdpoint — Screen</div>
+        <h1>{title}</h1>
+      </div>
+      <a href="/">← inventory</a>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
